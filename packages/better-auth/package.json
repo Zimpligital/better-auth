@@ -1,24 +1,26 @@
 {
   "name": "better-auth",
-  "version": "1.2.8-beta.2",
+  "version": "1.2.8-beta.3",
   "description": "The most comprehensive authentication library for TypeScript.",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/better-auth/better-auth",
+    "url": "https://github.com/Zimpligital/better-auth",
     "directory": "packages/better-auth"
   },
-
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "keywords": [
-          "auth",
-          "oauth",
-          "oidc",
-          "2fa",
-          "social",
-          "security",
-          "typescript",
-          "nextjs"
-      ],
+    "auth",
+    "oauth",
+    "oidc",
+    "2fa",
+    "social",
+    "security",
+    "typescript",
+    "nextjs"
+  ],
   "scripts": {
     "build": "unbuild --clean",
     "dev": "concurrently \"unbuild --watch\" \"npm run dev:types\"",
