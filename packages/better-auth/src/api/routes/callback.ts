@@ -131,8 +131,10 @@ export const callbackOAuth = createAuthEndpoint(
 			);
 
 			if (existingAccount) {
-				if (existingAccount.userId.toString() !== link.userId.toString()) {
-					return redirectOnError("account_already_linked_to_different_user");
+				if (existingAccount.userId.toString() !== link.userId.toString())  {
+					await c.context.internalAdapter.updateAccount(existingAccount.id, {
+						userId: link.userId,
+					});
 				}
 				const updateData = Object.fromEntries(
 					Object.entries({
